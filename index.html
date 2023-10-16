@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/72aa9ed869.js" crossorigin="anonymous"></script>
+    <title>Dropdown Menu</title>
+</head>
+<body>
+  <nav class="header navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="logo" class="navbar-brand" href="#">Cartola Tips</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars menu"></i>
+      </button>
+      <div class="collapse navbar-collapse menu-expandido" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link active" aria-current="page" href="#">Grupo Vip <i class="fa-regular fa-gem"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://t.me/+6lYEIgHMcTlmYTBh">Grupo Free</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dados Brasileirao 2023
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./pages/teamStats.html">Estatisticas</a></li>
+              <li><a class="dropdown-item" href="./pages/tabelaBrasileirao.html">Tabela</a></li>
+              <li><a class="dropdown-item" href="./pages/predictions.html">Previsoes</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="pagina-1">
+    <img class="imagem-inicial" src="./assets/imgs/bolavoando.png" alt="">
+    <h1>As Melhores DICAS estao aqui!</h1>
+  </div>
+
+  <div class="linha"></div>
+
+  <div class="produtos">
+    <div class="card" style="width: 18rem;">
+      <img src="./assets/imgs/grupo-vip.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Grupo Vip</h5>
+        <p class="card-text">O Grupo Vip envia diariamente apostas para resultado e o mercado de gols</p>
+        <a href="pagina-compra.html" class="btn btn-success">Adquira Aqui</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="./assets/imgs/grupo-free.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Grupo Free</h5>
+        <p class="card-text">O Grupo Free contem algumas das apostas enviadas no Grupo Vip.</p>
+        <a href="https://t.me/+6lYEIgHMcTlmYTBh" class="btn btn-success">Acesso</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="./assets/imgs/estadio.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Previsoes Brasileirao 2023</h5>
+        <p class="card-text">Algumas previoes para o Brasileirao 2023.</p>
+        <a href="./pages/predictions.html" class="btn btn-success">Clique Aqui</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dados-empresa">
+    <p><i class="fa-regular fa-circle-check"></i> Garantia de 7 dias</p>
+    <p><i class="fa-solid fa-phone"></i> Atendimento 24 horas</p>
+    <p><i class="fa-regular fa-paper-plane"></i> Acesse o Grupo Vip Agora</p>
+  </div>
+
+  <div class="faq">
+    <h1>Perguntas <span>Frequentes</span></h1>
+
+    <div class="qa">
+        <div class="question" onclick="toggleAnswer('q1')"><i class="fa-solid fa-caret-right"></i> Quanto custa o Grupo Vip?</div>
+        <div class="answer" id="q1">O Grupo Vip custa somente R$19,90/mês</div>
+    </div>
+
+    <div class="qa">
+        <div class="question" onclick="toggleAnswer('q2')"><i class="fa-solid fa-caret-right"></i> A compra é segura?</div>
+        <div class="answer" id="q2">Sim, a compra é feita através do site Hotmart, o maior site da América Latina para compras online.</div>
+    </div>
+
+    <div class="qa">
+        <div class="question" onclick="toggleAnswer('q3')"><i class="fa-solid fa-caret-right"></i> Quais sãos as ligas cobertas pelo Grupo Vip?</div>
+        <div class="answer" id="q3">As principais Ligas da Europa, alem do Brasileirão.</div>
+    </div>
+</div>
+  <script>
+    function toggleAnswer(questionId) {
+        var answer = document.getElementById(questionId);
+        if (answer.style.display === 'none' || answer.style.display === '') {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    }
+  </script>
+</body>
+</html>
